@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "vim的复制粘贴功能功能中的一些奇葩行为"
+title:  "vim的复制粘贴功能中的一些奇葩行为"
 date:   2018-06-11 00:00:00 -0700
 categories: 吐槽
 ---
