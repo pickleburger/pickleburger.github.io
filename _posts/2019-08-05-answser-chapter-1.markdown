@@ -8,3 +8,8 @@ categories: lambda maths
 - Question 1
     1. $ \lambda x.xxzy(xx) $
     2. $ (\lambda xyz.z(xyz))(\lambda u.u) $
+
+- Question 2
+    1. Yes
+    2. No
+    3. No
