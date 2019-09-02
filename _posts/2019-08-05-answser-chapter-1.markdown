@@ -39,7 +39,7 @@ $ U:=(\lambda z.zxz)((\lambda y.xy)x) $
     (2) KO: FV x is changed to y \\
     (3) OK \\
     (4) KO: new FV v is introduced. Order of the second abstraction term is wrong
-\\
+
 5. Given the results of the following substitutions:
     1. $(\lambda x.y(\lambda y.xy))[y:=\lambda z.zx]$ \\
     \\
@@ -80,7 +80,7 @@ $ U:=(\lambda z.zxz)((\lambda y.xy)x) $
     &= \lambda u.uu(yz)
     \end{align}
     $$
-\\
+
 6. Show that the following proposition is _not_ always true: \\
 $M[x:=N,y=L] \equiv M[x:=N][y:=L]$ \\
 \\
@@ -111,4 +111,15 @@ $S:= \lambda xyz.xz(yz)$. (Combinatory logic)
     $SSSKK = SK(SK)K = KK(SKK) = K = IK = SKKK$
 
 10. Church numerals
-    1. Show that $add\;one\;one\to_{\beta}two$
+    1. Show that $add\;one\;one\to_{\beta}two$ \\
+    \\
+    $$
+    \begin{align}
+    add\;one\;one &= \lambda nmfx.mf(nfx)(\lambda fx.fx)(\lambda fx.fx) \\
+    &\to_{\beta} \lambda mfx.mf((\lambda gy.gy)fx)(\lambda fx.fx) \\
+    &\to_{\beta} \lambda mfx.mf(fx)(\lambda fx.fx) \\
+    &\to_{\beta} \lambda fx.((\lambda gy.gy)f(fx)) \\
+    &\to_{\beta} \lambda fx.f(fx) \\
+    &= two \\
+    \end{align}
+    $$
