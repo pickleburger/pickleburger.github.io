@@ -21,7 +21,7 @@ categories: 作业
     1. Πα, β : ∗ . (nat → α) → (α → nat → β) → nat → β, where Γ ≡ nat : ∗. \\
     $$ \\
     nat : ∗ \\
-    | \alpla : * \\
+    | \alpha : * \\
     | | \beta : * \\
     | | | x : nat \to \alpha \\
     | | | | y : \alpha \to nat \to \beta \\
