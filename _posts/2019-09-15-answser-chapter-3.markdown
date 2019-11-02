@@ -2,7 +2,7 @@
 layout: post
 title:  "Exercises Chapter 3"
 date:   2019-09-15 00:00:00 -0700
-categories: 作业
+categories: homework
 ---
 
 1. How many λ2-contexts are there consisting of the four declarations α : ∗, β : ∗, f : α → β, x : α?

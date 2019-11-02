@@ -2,7 +2,7 @@
 layout: post
 title:  "Exercises Chapter 1"
 date:   2019-08-05 00:00:00 -0700
-categories: 作业
+categories: homework
 ---
 
 1. Question 1

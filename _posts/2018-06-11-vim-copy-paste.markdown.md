@@ -2,7 +2,7 @@
 layout: post
 title:  "vim的复制粘贴功能中的一些奇葩行为"
 date:   2018-06-11 00:00:00 -0700
-categories: 吐槽
+categories: tucao
 ---
 - visual mode，按v选择时，当前光标下的字符是没有被高亮的，但其实它还是被选中了
 

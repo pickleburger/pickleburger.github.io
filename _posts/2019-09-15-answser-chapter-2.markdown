@@ -2,7 +2,7 @@
 layout: post
 title:  "Exercises Chapter 2"
 date:   2019-09-15 00:00:00 -0700
-categories: 作业
+categories: homework
 ---
 
 1. Investigate for each of the following λ-terms whether they can be typed with a simple type. If so, give a type for the term and the corresponding types for x and y. If not, explain why.
