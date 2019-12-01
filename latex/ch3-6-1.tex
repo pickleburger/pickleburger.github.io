@@ -1,0 +1,39 @@
+\documentclass[varwidth=\maxdimen, border=10pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,flagderiv}
+
+
+\begin{document}
+
+% $$ \\
+% nat : ∗ \\
+% | \alpha : * \\
+% | | \beta : * \\
+% | | | x : nat \to \alpha \\
+% | | | | y : \alpha \to nat \to \beta \\
+% | | | | | z : nat \\
+% | | | | | | xz : alpha \\
+% | | | | | | y(xz)z : beta \\
+% | | | | | \lambda z : nat \to \beta \\
+% | | | | ? (\alpha \to nat \to \beta) \to nat \to \beta \\
+% | | | ? : (nat \to \alpha) \to (\alpha \to nat \to \beta) \to nat \to \beta \\
+% | \\
+% $$
+
+\begin{flagderiv}
+  \assume{}{nat : *}{}
+    \assume{}{\alpha : *}{}
+      \assume{}{\beta : *}{}
+        \assume{}{x : nat \to \alpha}{}
+          \assume{}{y : \alpha \to nat \to \beta}{}
+            \assume{}{z : nat}{}
+              \step{}{xz : \alpha}{}
+              \step{}{y(xz)z : \beta}{}
+            \conclude{}{\lambda z : nat \to \beta}{}
+          \conclude{}{\lambda z : nat \to \beta}{}
+        \conclude{}{(nat \to \alpha) \to (\alpha \to nat \to \beta) \to nat \to \beta}{}
+      \conclude{}{\Pi \beta : * . (nat \to \alpha) \to (\alpha \to nat \to \beta) \to nat \to \beta}{}
+    \conclude{}{\Pi \alpha, \beta : * . (nat \to \alpha) \to (\alpha \to nat \to \beta) \to nat \to \beta}{}
+\end{flagderiv}
+
+\end{document}

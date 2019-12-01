@@ -1,0 +1,35 @@
+\documentclass[varwidth=\maxdimen, border=10pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,flagderiv}
+
+
+\begin{document}
+
+% $$ \\
+% \alpha:* \\
+% | \beta:* \\
+% | | \gamma:* \\
+% | | | x : \alpha \to (\beta \to \alpha) \to \gamma \\
+% | | | | y : \alpha \\
+% | | | | | z : \beta \\
+% | | | | | \lambda z:\beta.y : \beta \to \alpha \\
+% | | | | | xy(\lambda z:\beta.y) : \gamma \\
+% | | | | \lambda y:\alpha.xy(\lambda z:\beta.y) : \alpha \to \gamma \\
+% | | | \lambda x:\alpha \to (\beta \to \alpha) \to \gamma.\lambda y:\alpha.xy(\lambda z:\beta.y)  : (\alpha \to (\beta \to \alpha) \to \gamma) \to \alpha \to \gamma \\
+% $$
+
+\begin{flagderiv}
+  \assume{}{\alpha : *}{}
+    \assume{}{\beta : *}{}
+      \assume{}{\gamma : *}{}
+        \assume{}{x : \alpha \to (\beta \to \alpha) \to \gamma}{}
+          \assume{}{y : \alpha}{}
+            \step{}{xy:(\beta \to \alpha) \to \gamma}{}
+            \assume{}{z : \beta}{}
+            \conclude{}{\lambda z:\beta.y : \beta \to \alpha}{}
+            \step{}{xy(\lambda z:\beta.y) : \gamma}{}
+          \conclude{}{\lambda y:\alpha.xy(\lambda z:\beta.y) : \alpha \to \gamma}{}
+        \conclude{}{\lambda x:\alpha \to (\beta \to \alpha) \to \gamma.\lambda y:\alpha.xy(\lambda z:\beta.y)  : (\alpha \to (\beta \to \alpha) \to \gamma) \to \alpha \to \gamma}{}
+\end{flagderiv}
+
+\end{document}

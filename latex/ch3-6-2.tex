@@ -1,0 +1,46 @@
+\documentclass[varwidth=\maxdimen, border=10pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,flagderiv}
+
+
+\begin{document}
+
+%     $$ \\
+%     \alpha:* \\
+%     | \beta:* \\
+%     | | \gamma:* \\
+%     | | | \delta : * \\
+%     | | | | x : (\alpha \to \gamma)\to \delta \\
+%     | | | | | y : \alpha \to \beta \\
+%     | | | | | | z : \beta \to \gamma \\
+%     | | | | | | | u : \alpha \\
+%     | | | | | | | | yu : \beta \\
+%     | | | | | | | | z(yu): \gamma \\
+%     | | | | | | | \lambda u: \alpha. z(yu) : \alpha \to \gamma \\
+%     | | | | | | | x(\lambda u: \alpha. z(yu)) : \delta \\
+%     | | | | | | \lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : (\beta \to \gamma) \to \delta \\
+%     | | | | | \lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : (\alpha \to \beta) \to (\beta \to \gamma) \to \delta \\
+%     | | | | \lambda x:(\alpha \to \gamma)\to \delta.\lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : ((\alpha \to \gamma)\to \delta) \to (\alpha \to \beta) \to (\beta \to \gamma) \to \delta \\
+%     | | | \lambda \delta:*.\lambda x:(\alpha \to \gamma)\to \delta.\lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : \Pi \delta : * . ((\alpha \to \gamma)\to \delta) \to (\alpha \to \beta) \to (\beta \to \gamma) \to \delta
+%     $$
+
+\begin{flagderiv}
+  \assume{}{\alpha:*}{}
+    \assume{}{\beta:*}{}
+      \assume{}{\gamma:*}{}
+        \assume{}{\delta:*}{}
+          \assume{}{x : (\alpha \to \gamma)\to \delta}{}
+            \assume{}{y : \alpha \to \beta}{}
+              \assume{}{z : \beta \to \gamma}{}
+                \assume{}{u : \alpha}{}
+                  \step{}{yu : \beta}{}
+                  \step{}{z(yu): \gamma}{}
+                \conclude{}{\lambda u: \alpha. z(yu) : \alpha \to \gamma}{}
+                \step{}{x(\lambda u: \alpha. z(yu)) : \delta}{}
+              \conclude{}{\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : (\beta \to \gamma) \to \delta}{}
+            \conclude{}{\lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : (\alpha \to \beta) \to (\beta \to \gamma) \to \delta}{}
+          \conclude{}{\lambda x:(\alpha \to \gamma)\to \delta.\lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : ((\alpha \to \gamma)\to \delta) \to (\alpha \to \beta) \to (\beta \to \gamma) \to \delta}{}
+        \conclude{}{\lambda \delta:*.\lambda x:(\alpha \to \gamma)\to \delta.\lambda y:\alpha \to \beta.\lambda z:\beta \to \gamma.x(\lambda u: \alpha. z(yu)) : \Pi \delta : * . ((\alpha \to \gamma)\to \delta) \to (\alpha \to \beta) \to (\beta \to \gamma) \to \delta}{}
+\end{flagderiv}
+
+\end{document}

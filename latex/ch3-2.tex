@@ -1,0 +1,56 @@
+\documentclass[varwidth=\maxdimen, border=10pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,flagderiv}
+
+
+\begin{document}
+
+% $$ \\
+% \alpha : * \\
+% | \beta : * \\
+% | | \gamma : * \\
+% | | | f : \alpha \to \beta \\
+% | | | | \lambda g:\beta \to \gamma \\
+% | | | | | \lambda x:\alpha \\
+% | | | | | | f : \alpha \to \beta (var) \\
+% | | | | | | x : \alpha (var) \\
+% | | | | | | fx:\beta (appl) \\
+% | | | | | | g : \beta \to \gamma (var) \\
+% | | | | | | g(fx): \gamma (appl) \\
+% | | | | | \lambda x:\alpha.g(fx) :\alpha \to \gamma (abst) \\
+% | | | | \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : (\beta \to \gamma) \to \alpha \to \gamma (abst) \\
+% | | | \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : (\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma (abst) \\
+% | | \lambda \gamma : * . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : \Pi \gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma (abst2) \\
+% | \lambda \beta, \gamma : * . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : \Pi \beta,\gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma (abst2) \\
+% \lambda \alpha, \beta, \gamma : * . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) :\Pi \alpha,\beta,\gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma (abst2) \\
+% $$
+
+% \begin{flagderiv}
+%   \introduce{in-x}{x: \mathbb{N}}{Introduction of $x$}
+%   \assume{as-x}{x > 5}{Assumption}
+%   \step{big-x}{x > 1}{Arithmetic on \ref{in-x} and \ref{as-x}}
+%   \conclude{conc}{x > 5 \implies x > 1}{$\implies$-intro on \ref{as-x} and \ref{big-x}}
+%   \conclude{}{\forall x \in \mathbb{N}: x > 5 \implies x > 1}{$\forall$-intro on \ref{in-x} and \ref{conc}}
+% \end{flagderiv}
+
+\begin{flagderiv}
+  \assume{}{\alpha : *}{}
+    \assume{}{\beta : *}{}
+      \assume{}{\gamma : *}{}
+        \assume{}{f : \alpha \to \beta}{}
+          \assume{}{g : \beta \to \gamma}{}
+            \assume{}{x : \alpha}{}
+              \step{}{f : \alpha \to \beta}{var}
+              \step{}{x : \alpha}{var}
+              \step{}{fx:\beta}{appl}
+              \step{}{g : \beta \to \gamma}{var}
+              \step{}{g(fx): \gamma}{appl}
+            \conclude{}{\lambda x:\alpha.g(fx) :\alpha \to \gamma}{abst}
+          \conclude{}{\lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : (\beta \to \gamma) \to \alpha \to \gamma}{abst}
+        \conclude{}{\lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : (\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma}{abst}
+      \conclude{}{\lambda \gamma : * . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : \Pi \gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma}{abst2}
+    \conclude{}{\lambda \beta, \gamma : * . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) : \Pi \beta,\gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma}{abst2}
+  \conclude{}{\lambda \alpha, \beta, \gamma :* . \lambda f: \alpha \to \beta. \lambda g:\beta \to \gamma .\lambda x:\alpha.g(fx) :\Pi \alpha,\beta,\gamma:*.(\alpha \to \beta) \to (\beta \to \gamma) \to \alpha \to \gamma}{abst2}
+\end{flagderiv}
+
+\end{document}

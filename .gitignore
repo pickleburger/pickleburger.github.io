@@ -2,6 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 .vscode
-latex/
-!latex/*.tex
+/latex/*
+!/latex/*.tex
 .DS_Store
