@@ -5,13 +5,13 @@ date:   2019-08-05 00:00:00 -0700
 categories: homework
 ---
 
-1. Question 1
+1.  Question 1
 
     1. $ \lambda x.xxzy(xx) $
 
     2. $ (\lambda xyz.z(xyz))(\lambda u.u) $
 
-2. Question 2
+2.  Question 2
 
     1. Yes
 
@@ -19,14 +19,15 @@ categories: homework
 
     3. No
 
-3. Question 3
+3.  Question 3
 
     1. $ \lambda z.z(\lambda z.y) =_\alpha \lambda x.(z(\lambda z.y))^{z\to x} = _\alpha \lambda x.x(\lambda z.y) $
 
         According to reflexivity, $ \lambda x.x(\lambda z.y) = _\alpha \lambda z.z(\lambda z.y) $
 
-4. Question 4. Consider the following $\lambda \text{-term}$: \\
-$ U:=(\lambda z.zxz)((\lambda y.xy)x) $
+4.  Question 4. Consider the following $\lambda \text{-term}$:
+
+    $ U:=(\lambda z.zxz)((\lambda y.xy)x) $
 
     1. Give a list of all subterms of $U$.
 
@@ -57,7 +58,7 @@ $ U:=(\lambda z.zxz)((\lambda y.xy)x) $
 
         4. KO: new FV v is introduced. Order of the second abstraction term is wrong
 
-5. Given the results of the following substitutions:
+5.  Given the results of the following substitutions:
 
     1. $(\lambda x.y(\lambda y.xy))[y:=\lambda z.zx]$
 
@@ -99,12 +100,13 @@ $ U:=(\lambda z.zxz)((\lambda y.xy)x) $
         \end{align}
         $$
 
-6. Show that the following proposition is _not_ always true: \\
-$M[x:=N,y=L] \equiv M[x:=N][y:=L]$
+6.  Show that the following proposition is _not_ always true:
+
+    $M[x:=N,y=L] \equiv M[x:=N][y:=L]$
 
     e.g. $ M \equiv x, N \equiv y, L \equiv z $, $M[x:=N,y=L] \equiv N \equiv y$, whereas $M[x:=N][y:=L] \equiv  L \equiv z$
 
-7. Consider the $\lambda \text{-term}$ $U$ of Exercise 1.4, again.
+7.  Consider the $\lambda \text{-term}$ $U$ of Exercise 1.4, again.
 
     1. Mark all redexes in U
 
@@ -114,13 +116,15 @@ $M[x:=N,y=L] \equiv M[x:=N][y:=L]$
 
         To be continued.
 
-8. Show that the terms $(\lambda x.xx)y$ and $(\lambda xy.yx)xx$ are _not_ $\beta \text{-convertible}$.
+8.  Show that the terms $(\lambda x.xx)y$ and $(\lambda xy.yx)xx$ are _not_ $\beta \text{-convertible}$.
 
     $(\lambda x.xx)y = yy$, whereas $(\lambda xy.yx)xx = (\lambda y.yx)x = xx$
 
-9. Consider the following $\lambda \text{-term}$s: \\
-$K:= \lambda xy.x$, \\
-$S:= \lambda xyz.xz(yz)$. (Combinatory logic)
+9.  Consider the following $\lambda \text{-term}$s:
+
+    $K:= \lambda xy.x$,
+
+    $S:= \lambda xyz.xz(yz)$. (Combinatory logic)
 
     1. Check that $KPQ\to_{\beta}P$ and $SPQR\to_{\beta}PR(QR)$, for arbitrary $\lambda \text{-term}$s P, Q and R.
 

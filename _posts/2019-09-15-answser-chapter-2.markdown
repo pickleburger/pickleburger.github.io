@@ -5,7 +5,7 @@ date:   2019-09-15 00:00:00 -0700
 categories: homework
 ---
 
-1. Investigate for each of the following λ-terms whether they can be typed with a simple type. If so, give a type for the term and the corresponding types for x and y. If not, explain why.
+1.  Investigate for each of the following λ-terms whether they can be typed with a simple type. If so, give a type for the term and the corresponding types for x and y. If not, explain why.
 
     1. xxy
 
@@ -27,7 +27,7 @@ categories: homework
 
         OK $x:\sigma \to \sigma, y: (\sigma \to \sigma) \to \sigma \vdash x(yx): \sigma$
 
-2. Find types for zero, one and two.
+2.  Find types for zero, one and two.
 
     1. zero
 
@@ -35,4 +35,4 @@ categories: homework
         one: $\lambda f:\sigma\to\sigma .\lambda x:\sigma . fx : (\sigma\to\sigma)\to\sigma\to\sigma$ \\
         two: $\lambda f:\sigma\to\sigma .\lambda x:\sigma . f(fx) : (\sigma\to\sigma)\to\sigma\to\sigma$
 
-3. Find types for K and S.
+3.  Find types for K and S.
